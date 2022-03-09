@@ -1,6 +1,5 @@
 const api1baseUrl = 'https://dummyjson.com';
-const api2baseUrl =
-  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
+const api2baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
 const appIdentifier = 'Qvm8BSyt3rweW6aXdeIT';
 
 const fetchAll = async () => {
