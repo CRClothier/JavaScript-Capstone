@@ -20,6 +20,8 @@ p {
 }
 
 .wrapper-image {
+  text-align: center;
+  width: 50%;
   border-radius: 0.5rem;
   margin-right: 4rem;
   border: 1px solid var(--white);
@@ -27,7 +29,8 @@ p {
 }
 
 .popup-image {
-  height: auto;
+  width: 40rem;
+  height: 25rem;
 }
 
 .item-details {
@@ -45,6 +48,10 @@ p {
 
 .item-specification span {
   padding-left: 1rem;
+}
+
+.item-category span {
+  text-transform: capitalize;
 }
 
 .item-ratings {
@@ -140,17 +147,21 @@ p {
 
 .btn {
   margin: 1rem 20%;
-  padding: 1.5rem 2rem;
+  padding: 1.3rem 2rem;
   min-width: 20rem;
+  text-transform: uppercase;    
   font-weight: 700;
   color: var(--white);
   background-color: var(--dark-pink);
   transition: all 0.5s ease;
+  border: 3px solid transparent;
+  border-radius: 2rem;
 }
 
 .btn:hover {
-  color: var(--white);
-  background-color: var(--dark-blue);
+  color: var(--dark-blue);
+  background-color: var(--light-pink);
+  border: 3px solid var(--dark-pink);
 }
 
 .image-slide {
