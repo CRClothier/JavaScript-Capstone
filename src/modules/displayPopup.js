@@ -8,7 +8,7 @@ const inStock = detail.querySelector('.item-instock span');
 const price = detail.querySelector('.item-price span');
 const description = detail.querySelector('.item-description');
 const title = detail.querySelector('.item-title');
-const rating = detail.querySelector('.stars-holder');
+const ratingElement = detail.querySelector('.stars-holder');
 
 const commentTemplate = document.querySelector('#template-comment');
 
@@ -33,4 +33,18 @@ const displayPopup = (product) => {
   commentsContainer.appendChild(comment);
 };
 
-export default displayPopup;
+const drawStars = (rating) => {
+  const icons = ratingElement.querySelectorAll('.bi');
+  const fillStars = Math.floor(rating);
+  let halfStars = 0;
+  if (rating > fillStars) halfStars = 1;
+  icons.forEach((icon, index) => {
+    if (index < fillStars) {
+      icon.classList.add('bi-star-fill');
+    } else if (halfStars === 1 && index === fillStars) {
+      icon.classList.add('bi-star-half');
+    } else icon.classList.add('bi-star');
+  });
+};
+
+export { displayPopup, drawStars };
