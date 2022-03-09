@@ -4,7 +4,6 @@
   margin: 0 5%;
   top: 10%;
   left: 0%;
-  gap: 0.1%;
   border: 1px solid var(--white);
   padding: 2rem 2rem 5rem 2rem;
   overflow-y: scroll;
@@ -13,8 +12,6 @@
 
 .item-detail-box {
   display: flex;
-  justify-content: center;
-  gap: 4rem;
   margin-bottom: 2rem;
 }
 
@@ -24,6 +21,7 @@ p {
 
 .wrapper-image {
   border-radius: 0.5rem;
+  margin-right: 4rem;
   border: 1px solid var(--white);
   overflow: hidden;
 }
@@ -51,11 +49,11 @@ p {
 
 .item-ratings {
   display: flex;
-  gap: 1rem;
   align-items: center;
 }
 
 .stars-holder {
+  padding-left: 1rem;
   color: var(--dark-pink);
 }
 
@@ -79,7 +77,6 @@ p {
   padding: 0 2rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .customer-name {
