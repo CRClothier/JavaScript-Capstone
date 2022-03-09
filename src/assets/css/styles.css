@@ -14,12 +14,16 @@
 *,
 html {
   font-size: 16px;
-  border: none;
+  border: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Railway, sans-serif;
   text-decoration: none;
   color: inherit;
+}
+
+body {
+  color: var(--dark-blue);
 }
 
 .header {
@@ -33,6 +37,7 @@ html {
   padding: 0 5%;
   background-color: var(--dark-blue);
   color: var(--light-pink);
+  z-index: 999;
 }
 
 .logo {
@@ -62,6 +67,7 @@ html {
   align-items: center;
   width: 100%;
   padding: 0 5%;
+  z-index: 999;
 }
 
 .social-links {
@@ -79,7 +85,7 @@ html {
 }
 
 .social-link a i {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .products {
