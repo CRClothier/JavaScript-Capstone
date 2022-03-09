@@ -56,4 +56,14 @@ const displayComments = (customerComment) => {
   commentsContainer.appendChild(comment);
 };
 
-export { displayContent, displayComments, drawStars };
+const changeThumbnails = (source) => {
+  const thumbnail = document.querySelector('.popup-image');
+  thumbnail.src = source;
+};
+
+export {
+  displayContent,
+  displayComments,
+  drawStars,
+  changeThumbnails,
+};
