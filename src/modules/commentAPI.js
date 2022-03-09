@@ -1,6 +1,5 @@
 const api1baseUrl = 'https://fakestoreapi.com';
-const api2baseUrl =
-  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
+const api2baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
 const appIdentifier = 'Qvm8BSyt3rweW6aXdeIT';
 
 const fetchAll = async () => {
@@ -29,6 +28,7 @@ const sendLikes = async (id) => {
       },
     },
   );
+  return response;
 
   // const status = await response.json();
   // console.log(status);
@@ -76,4 +76,12 @@ const createNewItem = async () => {
   return identifier;
 };
 
-export { fetchAll, fetchSingleProduct, sendLikes };
+export {
+  fetchAll,
+  fetchSingleProduct,
+  sendLikes,
+  getComment,
+  createNewItem,
+  sendComment,
+  getLikes,
+};
