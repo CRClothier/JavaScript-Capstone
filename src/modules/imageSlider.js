@@ -11,13 +11,12 @@ const getImage = async (id) => {
 
 const addSlide = (image, index) => {
   const imageItem = document.createElement('img');
-  imageItem.classList.add(`image-${index}`);
+  imageItem.classList.add(`image-${index}`, 'slide-img');
   imageItem.src = image;
   imageSlide.appendChild(imageItem);
 };
 
 const constructImageSlide = (container, id) => {
-  console.log(id);
   getImage(id).then((result) => {
     result.images.forEach((image, index) => {
       addSlide(image, index);
