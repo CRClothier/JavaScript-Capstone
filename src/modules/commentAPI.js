@@ -1,9 +1,10 @@
-const api1baseUrl = 'https://fakestoreapi.com';
-const api2baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
+const api1baseUrl = 'https://dummyjson.com';
+const api2baseUrl =
+  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
 const appIdentifier = 'Qvm8BSyt3rweW6aXdeIT';
 
 const fetchAll = async () => {
-  const response = await fetch('https://fakestoreapi.com/products');
+  const response = await fetch(`${api1baseUrl}/products`);
   const products = await response.json();
   return products;
 };
@@ -29,9 +30,6 @@ const sendLikes = async (id) => {
     },
   );
   return response;
-
-  // const status = await response.json();
-  // console.log(status);
 };
 
 const getLikes = async () => {
@@ -57,14 +55,12 @@ const sendComment = async (id, name, userComment) => {
       },
     },
   );
-
-  const status = await response.json();
-  return status;
+  return response;
 };
 
-const getComment = async (id) => {
+const getComments = async (id) => {
   const response = await fetch(
-    `${api2baseUrl}/apps/${appIdentifier}/comments?item_id${id}`,
+    `${api2baseUrl}/apps/${appIdentifier}/comments?item_id=${id}`,
   );
   const comments = await response.json();
   return comments;
@@ -80,7 +76,7 @@ export {
   fetchAll,
   fetchSingleProduct,
   sendLikes,
-  getComment,
+  getComments,
   createNewItem,
   sendComment,
   getLikes,
