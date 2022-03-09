@@ -89,9 +89,10 @@ body {
 }
 
 .products {
+  display: none;
   width: 80%;
   margin: 100px auto 100px auto;
-  display: flex;
+  /* display: flex; */
   flex-wrap: wrap;
   justify-content: space-between;
 }
