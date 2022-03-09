@@ -27,9 +27,7 @@
         </li>
       </ul>
     </header>
-    <main class="products">
-      
-    </main>
+    <main class="products"></main>
 
     <section class="comments-popup">
       <div class="item-detail-box">
@@ -52,7 +50,7 @@
                 <span>Men's Clothing</span>
               </p>
               <p class="item-instock">
-                <strong>Instock:</strong> <span>120</span>
+                <strong>InStock:</strong> <span>120</span>
               </p>
               <p class="item-price">
                 <strong>Item-price:</strong> <span>$120</span>
@@ -79,19 +77,20 @@
         </template>
       </div>
       <div class="item-comments">
-        <p class="comment-title">Comments</p>
+        <p class="comment-title">Comments <span></span></p>
         <div class="wrapper-customers-comment">
           <template id="template-comment">
-            <p class="customer-name"><strong>John Dev</strong></p>
-            <div class="customer-comment-body">
-              <p class="customer-comment">
-                <em>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing
-                  elit. Beatae, necessitatibus. Lorem ipsum dolor sit
-                  amet, consectetur adipisicing elit. Tenetur nihil
-                </em>
+            <div class="comment-holder">
+              <p class="customer-name">
+                <i class="bi bi-person-circle"></i
+                ><strong>John Dev</strong>
               </p>
-              <p class="customer-comment-date">08-03-2022: 4:00PM</p>
+              <div class="customer-comment-body">
+                <p class="customer-comment"></p>
+                <p class="customer-comment-date">
+                  08-03-2022: 4:00PM
+                </p>
+              </div>
             </div>
           </template>
         </div>
