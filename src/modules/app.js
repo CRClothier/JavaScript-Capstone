@@ -1,6 +1,6 @@
 import '../assets/css/styles.css';
 import makeProductList from './makeProductList.js';
 import '../assets/css/comment.css';
-import './comments.js';
+import './commentPopup.js';
 
 makeProductList();
