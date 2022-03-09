@@ -11,9 +11,9 @@ const makeProductList = () => {
       </section>`;
       productsHtml += buildingBlock;
     });
+    const container = document.querySelector('.products');
+    container.innerHTML = productsHtml;
   });
-  const container = document.querySelector('.products');
-  container.innerHTML = productsHtml;
 };
 
 export default makeProductList;
