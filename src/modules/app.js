@@ -1,4 +1,7 @@
 import '../assets/css/styles.css';
 import makeProductList from './makeProductList.js';
+import getProducts from './getProducts.js';
 
-makeProductList();
+getProducts().then(() => {
+  makeProductList();
+});
