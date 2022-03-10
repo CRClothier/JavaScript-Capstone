@@ -2,7 +2,7 @@ import getProducts from './getProducts.js';
 import { getLikes } from './commentAPI.js';
 
 const makeProductList = (category) => {
-  getLikes().then((likes) => { 
+  getLikes().then((likes) => {
     let productsHtml = '';
     getProducts(category).then((list) => {
       list.products.forEach((product) => {
