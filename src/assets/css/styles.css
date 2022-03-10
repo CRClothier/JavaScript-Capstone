@@ -14,16 +14,11 @@
 *,
 html {
   font-size: 16px;
-  border: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Railway, sans-serif;
   text-decoration: none;
   color: inherit;
-}
-
-.comments-popup {
-  display: none;
 }
 
 body {
@@ -50,6 +45,7 @@ body {
 }
 
 .categories {
+  margin: 0;
   display: flex;
   font-size: 1.2rem;
 }
@@ -58,6 +54,13 @@ body {
   padding: 10px;
   font-size: 1.2rem;
   list-style-type: none;
+  border-bottom: 4px solid transparent;
+  transition: border-bottom 0.5s;
+}
+
+.category:hover {
+  color: var(--dark-pink);
+  border-bottom: 4px solid var(--dark-pink);
 }
 
 .footer {
@@ -75,6 +78,7 @@ body {
 }
 
 .social-links {
+  margin: 0;
   display: flex;
   list-style: none;
 }
@@ -142,4 +146,55 @@ body {
 .bi-heart-fill {
   font-size: 2rem;
   color: var(--dark-pink);
+}
+
+.bi-list,
+.bi-x {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0.5rem;
+  display: none;
+  font-size: 3.4rem;
+  color: var(--dark-blue);
+  z-index: 9999;
+}
+
+.bi-x {
+  color: var(--white);
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    background-color: rgba(20, 24, 80, 0.95);
+  }
+
+  .categories {
+    display: none;
+    height: 100vh;
+    flex-direction: column;
+    padding: 3rem 2rem;
+  }
+
+  .bi-list {
+    display: block;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .category {
+    padding: 12px;
+    transition: color 0.5s;
+  }
+
+  .category:hover {
+    color: var(--dark-pink);
+    border-bottom: 4px solid transparent;
+  }
+
+  .category a {
+    font-size: 1.8rem;
+  }
 }
