@@ -20,7 +20,7 @@ const makeProductList = (category) => {
           <i class="bi bi-heart" item-id="${product.id}"></i>
           <p>${numberOfLikes} like(s)</p>
         </div>
-        <a id=">${product.id}" class="comments button" href="#">Comments</a>
+        <a id="${product.id}" class="comments button" href="#">Comments</a>
         </section>`;
         productsHtml += buildingBlock;
       });
