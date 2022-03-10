@@ -16,5 +16,8 @@ document.addEventListener('click', (e) => {
     sendLikes(itemID);
     e.target.classList.remove('bi-heart');
     e.target.classList.add('bi-heart-fill');
+    makeProductList('smartphones');
+    makeProductList('laptops');
+    makeProductList('lighting');
   }
 });
