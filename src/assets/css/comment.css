@@ -40,12 +40,13 @@
   overflow: hidden;
   padding: 0.4rem 0.1rem;
   background: #333;
-  background: linear-gradient(
-    90deg,
-    #333 0%,
-    var(--white) 50%,
-    #333 100%
-  );
+  background:
+    linear-gradient(
+      90deg,
+      #333 0%,
+      var(--white) 50%,
+      #333 100%
+    );
 }
 
 .image-slide img {
@@ -256,7 +257,7 @@
   }
 }
 
-.submit-status {  
+.submit-status {
   color: var(--dark-pink);
   font-weight: 600;
   padding: 0.4rem 0;
