@@ -5,6 +5,10 @@
 # CM SHOPPING WEBSITE
 The CM Shoping website is built with JavaScript, HTML, and CSS. Webpack, ES6 features, and notably modules have been used in developing this website. The CM Shopping Website consumes DummyJSON and Involvement APIs.  The overall website styles are done using CSS.
 
+## Video Presentation
+
+![Watch our video presentation](https://drive.google.com/drive/folders/1WI6aaFi7xWZvKK4AltanxdRKm0EWhi3I?usp=sharing)
+
 ## Screenshot
 
 ![screenshot](src/assets/images/screenshot.png)
