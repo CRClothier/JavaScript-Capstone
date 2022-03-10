@@ -53,3 +53,14 @@ document.addEventListener('mouseover', (e) => {
     changeThumbnails(e.target.src);
   }
 });
+
+document.addEventListener('click', (e) => {
+  const menuOpen = document.querySelector('.bi-list');
+  const menu = document.querySelector('.categories');
+  const menuClose = document.querySelector('.bi-x');
+  if (e.target.classList.contains('link')) {
+    menu.style.display = 'none';
+    menuClose.style.display = 'none';
+    menuOpen.style.display = 'block';
+  }
+});
