@@ -20,7 +20,7 @@ export default class Counter {
     let comment;
     getComments(id).then((comments) => {
       comment = comments.length;
-      commentCount.textContent = `-(${comment})`;
+      commentCount.textContent = comment;
       this.comments = comment;
     });
     return this.comments;
