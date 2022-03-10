@@ -38,8 +38,8 @@ document.addEventListener('click', (e) => {
   }
 });
 
-// slideImages.forEach((slideImage) => {
-//   slideImage.addEventListener('click', (e) => {
-//     changeThumbnails(e.target.src);
-//   });
-// });
+document.addEventListener('mouseover', (e) => {
+  if (e.target.classList.contains('slide-img')) {
+    changeThumbnails(e.target.src);
+  }
+});
