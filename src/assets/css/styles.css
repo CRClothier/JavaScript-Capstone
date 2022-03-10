@@ -22,6 +22,10 @@ html {
   color: inherit;
 }
 
+.comments-popup {
+  display: none;
+}
+
 body {
   color: var(--dark-blue);
 }

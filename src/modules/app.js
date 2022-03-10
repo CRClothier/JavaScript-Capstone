@@ -3,4 +3,5 @@ import makeProductList from './makeProductList.js';
 import '../assets/css/comment.css';
 import './comments.js';
 
-makeProductList();
+makeProductList('smartphones');
+makeProductList('laptops');
