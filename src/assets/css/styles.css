@@ -96,9 +96,26 @@ body {
   width: 100%;
   margin: 7% auto 4rem auto;
   padding: 0 10%;
-  display: flex;
-  justify-content: start;
-  flex-wrap: wrap;
+  display: grid;
+  justify-items: center;
+}
+
+@media (min-width: 768px) {
+  .products {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .products {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1500px) {
+  .products {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .product {
