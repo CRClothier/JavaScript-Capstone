@@ -59,7 +59,7 @@ document.addEventListener('click', (e) => {
   const menu = document.querySelector('.categories');
   const menuClose = document.querySelector('.bi-x');
   if (
-    e.target.classList.contains('link') 
+    e.target.classList.contains('link')
     && window.screen.width < 768
   ) {
     menu.style.display = 'none';
