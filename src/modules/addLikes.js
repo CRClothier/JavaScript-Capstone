@@ -1,14 +1,13 @@
 import { sendLikes } from './commentAPI.js';
 
 const addLikes = () => {
-  const hearts = document.querySelectorAll('.bi-heart');
-  hearts.forEach((heart) => {
-    heart.addEventListener('click', (e) => {
-      const itemID = e.target.getAttribute('item-id');
+  document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('.bi-heart')) {
+      const itemID = Number(e.target.getAttribute('item-id'));
       sendLikes(itemID);
-      heart.classList.remove('bi-heart');
-      heart.classList.add('bi-heart-fill');
-    });
+      e.target.classList.remove('bi-heart');
+      e.target.classList.add('bi-heart-fill');
+    }
   });
 };
 

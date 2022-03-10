@@ -1,14 +1,15 @@
 import getProducts from './getProducts.js';
 import { getLikes } from './commentAPI.js';
-import addLikes from './addLikes.js';
 
 const makeProductList = (category) => {
-  getLikes().then((likes) => {
+  getLikes().then((likes) => { 
     let productsHtml = '';
     getProducts(category).then((list) => {
       list.products.forEach((product) => {
         let numberOfLikes = 0;
-        const isLiked = likes.findIndex((like) => like.item_id === product.id);
+        const isLiked = likes.findIndex(
+          (like) => Number(like.item_id) === Number(product.id),
+        );
         if (isLiked >= 0) {
           numberOfLikes = likes[isLiked].likes;
         }
@@ -25,7 +26,6 @@ const makeProductList = (category) => {
       });
       const container = document.querySelector(`.${category}`);
       container.innerHTML = productsHtml;
-      addLikes();
     });
   });
 };

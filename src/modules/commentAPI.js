@@ -1,6 +1,6 @@
 const api1baseUrl = 'https://fakestoreapi.com';
 const api2baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
-const appIdentifier = 'Qvm8BSyt3rweW6aXdeIT';
+const appIdentifier = 'VOGkcDJv42MGbQ7yAFhH';
 
 const fetchAll = async () => {
   const response = await fetch('https://fakestoreapi.com/products');
