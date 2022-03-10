@@ -1,5 +1,6 @@
 import getProducts from './getProducts.js';
 import { getLikes } from './commentAPI.js';
+import addLikes from './addLikes.js';
 
 const makeProductList = (category) => {
   getLikes().then((likes) => {
@@ -15,7 +16,7 @@ const makeProductList = (category) => {
         <img src="${product.thumbnail}" alt="">
         <h2>${product.title}</h2>
         <div class="likes">
-          <i class="bi bi-heart"></i>
+          <i class="bi bi-heart" item-id="${product.id}"></i>
           <p>${numberOfLikes} like(s)</p>
         </div>
         <a id=">${product.id}" class="comments button" href="#">Comments</a>
@@ -24,6 +25,7 @@ const makeProductList = (category) => {
       });
       const container = document.querySelector(`.${category}`);
       container.innerHTML = productsHtml;
+      addLikes();
     });
   });
 };
