@@ -1,7 +1,7 @@
 import '../assets/css/styles.css';
 import makeProductList from './makeProductList.js';
 import '../assets/css/comment.css';
-import setEvents from '../displaySection.js';
+import setEvents from './displaySection.js';
 import { sendLikes } from './commentAPI.js';
 import './displayPopup.js';
 import { updateProductsArray } from './productCounter.js';
