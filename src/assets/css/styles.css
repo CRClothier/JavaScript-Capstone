@@ -101,6 +101,7 @@ body {
 .lighting-container {
   margin-top: 7%;
   text-align: center;
+  flex-direction: column;
 }
 
 h2 {
