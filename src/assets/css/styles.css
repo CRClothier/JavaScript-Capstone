@@ -41,7 +41,7 @@ body {
   padding: 0 5%;
   background-color: var(--dark-blue);
   color: var(--light-pink);
-  z-index: 999;
+  z-index: 99;
 }
 
 .logo {
@@ -71,7 +71,7 @@ body {
   align-items: center;
   width: 100%;
   padding: 0 5%;
-  z-index: 999;
+  z-index: 99;
 }
 
 .social-links {
@@ -101,6 +101,13 @@ body {
 
 h2 {
   font-size: 2rem;
+}
+
+.product-count {
+  color: #ed7966;
+  font-size: 1.4rem;
+  position: absolute;
+  top: 65px;
 }
 
 .products {

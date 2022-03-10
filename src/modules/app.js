@@ -4,11 +4,13 @@ import '../assets/css/comment.css';
 import setEvents from '../displaySection.js';
 import { sendLikes } from './commentAPI.js';
 import './displayPopup.js';
+import { updateProductsArray } from './productCounter.js';
 
 setEvents();
 makeProductList('smartphones');
 makeProductList('laptops');
 makeProductList('lighting');
+updateProductsArray();
 
 document.addEventListener('click', (e) => {
   if (e.target.classList.contains('bi-heart')) {
