@@ -1,5 +1,6 @@
 const api1baseUrl = 'https://dummyjson.com';
-const api2baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
+const api2baseUrl =
+  'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
 const appIdentifier = 'VOGkcDJv42MGbQ7yAFhH';
 
 const fetchAll = async () => {
@@ -62,7 +63,10 @@ const getComments = async (id) => {
     `${api2baseUrl}/apps/${appIdentifier}/comments?item_id=${id}`,
   );
   const comments = await response.json();
-  return comments;
+  if (Array.isArray(comments)) {
+    return comments;
+  }
+  return [];
 };
 
 const createNewItem = async () => {
