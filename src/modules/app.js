@@ -3,7 +3,7 @@ import makeProductList from './makeProductList.js';
 import '../assets/css/comment.css';
 import setEvents from '../displaySection.js';
 import { sendLikes } from './commentAPI.js';
-import './diplayPopup.js';
+import './displayPopup.js';
 
 setEvents();
 makeProductList('smartphones');
