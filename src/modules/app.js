@@ -1,9 +1,9 @@
 import '../assets/css/styles.css';
 import makeProductList from './makeProductList.js';
 import '../assets/css/comment.css';
-import './comments.js';
 import setEvents from '../displaySection.js';
 import { sendLikes } from './commentAPI.js';
+import './diplayPopup.js';
 
 setEvents();
 makeProductList('smartphones');

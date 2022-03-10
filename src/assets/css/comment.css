@@ -1,87 +1,163 @@
 .comments-popup {
-  width: 100%;
+  background-color: #ffe;
+  width: 90%;
   position: absolute;
-  margin: 0 5%;
-  top: 10%;
-  left: 0%;
-  gap: 0.1%;
-  border: 1px solid var(--white);
-  padding: 2rem 2rem 5rem 2rem;
-  overflow-y: scroll;
+  top: 7%;
+  margin-left: 5rem;
+  padding: 3rem 2rem 5% 2rem;
   z-index: 99;
+  box-shadow: 0 17px 47px 16px var(--light-pink);
 }
 
 .item-detail-box {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  width: 100%;
 }
 
 .wrapper-image {
-  width: 30%;
-  border-radius: 2rem;
-  border: 1px solid var(--white);
+  box-shadow: 0 17px 24px 16px var(--light-pink);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-right: 4rem;
+  border: 3px solid var(--white);
+  overflow: hidden;
 }
 
 .popup-image {
-  padding: 0.5rem;
-  width: 100%;
-  height: auto;
+  min-width: 40rem;
+  height: 25rem;
 }
 
-.item-details {
-  width: 50%;
+.image-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 0.4rem 0.1rem;
+  background: #333;
+  background:
+    linear-gradient(
+      90deg,
+      #333 0%,
+      var(--white) 50%,
+      #333 100%
+    );
+}
+
+.image-slide img {
+  height: 2rem;
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.75s ease-in-out;
+  border-radius: 0.1rem;
+}
+
+.image-slide img:hover {
+  transform: scale(1.2);
 }
 
 .item-title {
   font-size: 1.5rem;
 }
 
+@media screen and (max-width: 992px) {
+  .comments-popup {
+    margin-left: 2.5rem;
+  }
+
+  .popup-image {
+    width: auto;
+    height: 25rem;
+  }
+
+  .item-detail-box {
+    flex-direction: column;
+  }
+}
+
 .item-specification {
-  display: grid;
-  grid-template-columns: auto auto;
-  column-gap: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .item-specification span {
   padding-left: 1rem;
 }
 
+.item-category span {
+  text-transform: capitalize;
+}
+
 .item-ratings {
+  margin: 0.4rem 0;
   display: flex;
   align-items: center;
-  gap: 1rem;
+}
+
+.stars-holder {
+  padding-left: 1rem;
+  color: var(--dark-pink);
 }
 
 .item-comments {
-  padding: 0 2rem 2rem 2rem;
+  padding: 0 2rem;
 }
 
 .comment-title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
+.comment-title span {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+  color: var(--white);
+  background-color: var(--dark-pink);
+}
+
+.comment-holder {
+  margin-bottom: 0.2rem;
+  border: 1px solid var(--light-pink);
+  border-radius: 0.5rem;
+}
+
 .customer-comment-body {
-  background-color: var(--white);
-  padding: 0.1rem 1rem;
+  padding: 0 1rem;
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
-  border-radius: 0.5rem;
-  margin-bottom: 0.4rem;
 }
 
 .customer-name {
+  text-transform: capitalize;
+  letter-spacing: 1px;
   padding-left: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.bi-person-circle {
+  font-size: 2rem;
+  padding-right: 1rem;
+  color: var(--dark-pink);
 }
 
 .customer-comment {
-  width: 70%;
+  padding-right: 4rem;
+}
+
+.customer-comment::first-letter {
+  text-transform: uppercase;
 }
 
 .customer-comment-date {
-  width: 20%;
+  color: var(--dark-pink);
 }
 
 .comment-form {
@@ -119,15 +195,62 @@
 
 .btn {
   margin: 1rem 20%;
-  padding: 1.5rem 2rem;
+  padding: 1.3rem 2rem;
   min-width: 20rem;
+  text-transform: uppercase;
   font-weight: 700;
   color: var(--white);
   background-color: var(--dark-pink);
-  transition: all 0.5s;
+  transition: all 0.5s ease;
+  border: 3px solid transparent;
+  border-radius: 2rem;
 }
 
 .btn:hover {
-  color: var(--white);
-  background-color: var(--dark-blue);
+  color: var(--dark-blue);
+  background-color: var(--light-pink);
+  border: 3px solid var(--dark-pink);
+}
+
+@media screen and (max-width: 768px) {
+  .comments-popup {
+    margin: 0;
+    width: 100%;
+    padding: 1rem 2rem 5% 1rem;
+  }
+
+  .popup-image {
+    width: auto;
+    height: 10rem;
+  }
+
+  .item-comments {
+    padding: 0;
+  }
+
+  .customer-comment-body {
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .customer-comment {
+    padding-right: 0;
+  }
+
+  .comment-form {
+    padding: 0.5rem;
+  }
+
+  .wrapper-name input,
+  .wrapper-comment textarea {
+    width: 90%;
+    padding: 0.75rem;
+  }
+
+  .btn {
+    margin: 1rem 20%;
+    float: right;
+    padding: 0.8rem 2rem;
+    min-width: 10rem;
+  }
 }
