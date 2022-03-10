@@ -62,7 +62,10 @@ const getComments = async (id) => {
     `${api2baseUrl}/apps/${appIdentifier}/comments?item_id=${id}`,
   );
   const comments = await response.json();
-  return comments;
+  if (Array.isArray(comments)) {
+    return comments;
+  }
+  return [];
 };
 
 const createNewItem = async () => {

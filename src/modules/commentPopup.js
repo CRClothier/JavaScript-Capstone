@@ -10,31 +10,41 @@ import Counter from './count.js';
 
 const Count = new Counter();
 
-const buttonComment = document.getElementById('submit');
+document.addEventListener('click', (e) => {
+  if (e.target.classList.contains('comments')) {
+    const buttonComment = document.getElementById('submit');
+    const { id } = e.target;
+    buttonComment.setAttribute('item_id', id);
+    const popup = document.querySelector('.comments-popup ');
+    popup.style.display = 'block';
 
-buttonComment.addEventListener('click', () => {
-  const id = 8;
-  fetchSingleProduct(id).then((product) => {
-    displayContent(product);
-    drawStars(product.rating);
-  });
-});
+    fetchSingleProduct(id).then((product) => {
+      displayContent(product);
+      drawStars(product.rating);
+    });
 
-buttonComment.addEventListener('click', () => {
-  getComments(1).then((comments) => {
-    comments.forEach((comment) => displayComments(comment));
-  });
-  Count.getCommentsCount(1);
-});
-
-buttonComment.addEventListener('click', (e) => {
-  e.preventDefault();
-  submitComment();
+    getComments(id).then((comments) => {
+      if (comments) {
+        comments.forEach((comment) => displayComments(comment));
+        Count.getCommentsCount(id);
+      }
+    });
+  }
 });
 
 document.addEventListener('click', (e) => {
   if (e.target.classList.contains('slide-img')) {
     changeThumbnails(e.target.src);
+  }
+  if (e.target.id === 'submit') {
+    const id = e.target.getAttribute('item_id');
+    const popup = document.querySelector('.comments-popup');
+    const message = document.querySelector('.submit-status');
+    message.textContent = '';
+    e.preventDefault();
+    if (submitComment(id)) {
+      popup.style.display = 'none';
+    }
   }
 });
 
