@@ -15,7 +15,7 @@ const makeProductList = (category) => {
         }
         const buildingBlock = `<section class="product">
         <img src="${product.thumbnail}" alt="">
-        <h2>${product.title}</h2>
+        <h3>${product.title}</h3>
         <div class="likes">
           <i class="bi bi-heart" item-id="${product.id}"></i>
           <p>${numberOfLikes} like(s)</p>

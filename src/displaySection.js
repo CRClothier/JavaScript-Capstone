@@ -1,6 +1,6 @@
-const laptops = document.querySelector('.laptops');
-const smartphones = document.querySelector('.smartphones');
-const lighting = document.querySelector('.lighting');
+const laptops = document.querySelector('.laptops-container');
+const smartphones = document.querySelector('.smartphones-container');
+const lighting = document.querySelector('.lighting-container');
 
 const displayAll = () => {
   laptops.style.display = 'flex';

@@ -92,9 +92,19 @@ body {
   font-size: 1.8rem;
 }
 
+.smartphones-container,
+.laptops-container,
+.lighting-container {
+  margin-top: 7%;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
 .products {
   width: 100%;
-  margin: 7% auto 4rem auto;
   padding: 0 10%;
   display: grid;
   justify-items: center;
