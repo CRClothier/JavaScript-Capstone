@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css');
+
+:root {
+  --white: #eee;
+  --light-pink: #fae5df;
+  --medium-pink: #f5cac2;
+  --dark-pink: #ed7966;
+  --blue: #303179;
+  --dark-blue: #141850;
+  --dark: #141720;
+}
+
+*,
+html {
+  font-size: 16px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Railway, sans-serif;
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  color: var(--dark-blue);
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 5%;
+  background-color: var(--dark-blue);
+  color: var(--light-pink);
+  z-index: 1;
+}
+
+.logo {
+  height: 4rem;
+  width: auto;
+}
+
+.categories {
+  margin: 0;
+  display: flex;
+  font-size: 1.2rem;
+}
+
+.category {
+  padding: 10px;
+  font-size: 1.2rem;
+  list-style-type: none;
+  border-bottom: 4px solid transparent;
+  transition: border-bottom 0.5s;
+}
+
+.category:hover {
+  color: var(--dark-pink);
+  border-bottom: 4px solid var(--dark-pink);
+}
+
+.footer {
+  background-color: var(--light-pink);
+  color: var(--dark-blue);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 5%;
+  z-index: 1;
+}
+
+.social-links {
+  margin: 0;
+  display: flex;
+  list-style: none;
+}
+
+.social-link {
+  padding: 0 0.75rem;
+  cursor: pointer;
+}
+
+.social-link a {
+  text-decoration: none;
+}
+
+.social-link a i {
+  font-size: 1.8rem;
+}
+
+.smartphones-container,
+.laptops-container,
+.lighting-container {
+  margin-top: 7%;
+  text-align: center;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.product-count {
+  color: #ed7966;
+  font-size: 1.4rem;
+  position: absolute;
+  top: 65px;
+}
+
+.products {
+  width: 100%;
+  padding: 0 10%;
+  display: grid;
+  justify-items: center;
+}
+
+@media (min-width: 768px) {
+  .products {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .products {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1500px) {
+  .products {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.product {
+  width: 21rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  border: 1px solid var(--dark-pink);
+  border-radius: 1rem;
+  padding-bottom: 1rem;
+  overflow: hidden;
+  box-shadow: 2px 2px 18px -5px var(--dark-pink);
+}
+
+.product img {
+  width: 21rem;
+  height: 12rem;
+  margin-bottom: 1rem;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  background-color: var(--dark-pink);
+  border: 2px solid transparent;
+  transition: all 0.5s;
+}
+
+.button:hover {
+  color: var(--dark);
+  background-color: var(--white);
+  border: 2px solid var(--dark-pink);
+}
+
+.bi-heart,
+.bi-heart-fill {
+  font-size: 2rem;
+  color: var(--dark-pink);
+}
+
+.bi-list,
+.menu-close,
+.popup-close {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0.5rem;
+  display: none;
+  font-size: 3.4rem;
+  color: var(--dark-blue);
+  z-index: 2;
+}
+
+.menu-close {
+  color: var(--white);
+}
+
+.popup-close {
+  position: fixed;
+  top: 0.5rem;
+  right: 11vw;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    background-color: rgba(20, 24, 80, 0.95);
+  }
+
+  .categories {
+    display: none;
+    height: 100vh;
+    flex-direction: column;
+    padding: 3rem 2rem;
+  }
+
+  .bi-list {
+    display: block;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .category {
+    padding: 12px;
+    transition: color 0.5s;
+  }
+
+  .category:hover {
+    color: var(--dark-pink);
+    border-bottom: 4px solid transparent;
+  }
+
+  .category a {
+    font-size: 1.8rem;
+  }
+}
