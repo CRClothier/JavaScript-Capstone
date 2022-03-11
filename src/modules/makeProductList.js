@@ -18,7 +18,7 @@ const makeProductList = (category) => {
         <h3>${product.title}</h3>
         <div class="likes">
           <i class="bi bi-heart" item-id="${product.id}"></i>
-          <p>${numberOfLikes} like(s)</p>
+          <p><span class="likes-count">${numberOfLikes}</span> like(s)</p>
         </div>
         <a id="${product.id}" class="comments button" href="#">Comments</a>
         </section>`;

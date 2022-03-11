@@ -122,17 +122,17 @@ h2 {
   justify-items: center;
 }
 
-@media (max-width: 540px) {
-
+@media (max-width: 768px) {
   .product-count {
     font-size: inherit;
   }
+
   .products {
     padding: 0 1%;
   }
 
   h2 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     padding-left: 0;
     text-align: center;
   }
@@ -197,6 +197,15 @@ h2 {
 .bi-heart-fill {
   font-size: 2rem;
   color: var(--dark-pink);
+  cursor: pointer;
+}
+
+.bi-heart {
+  transition: all 0.75s;
+}
+
+.bi-heart:hover {
+  color: var(--dark-blue);
 }
 
 .bi-list,
@@ -209,6 +218,7 @@ h2 {
   display: none;
   font-size: 3.4rem;
   color: var(--dark-blue);
+  transition: color 0.5s;
   z-index: 2;
 }
 
@@ -221,6 +231,11 @@ h2 {
   top: 0.5rem;
   right: 11vw;
   display: block;
+}
+
+.menu-close:hover,
+.popup-close:hover {
+  color: var(--dark-pink);
 }
 
 @media screen and (max-width: 768px) {

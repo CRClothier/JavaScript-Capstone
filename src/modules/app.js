@@ -17,10 +17,16 @@ document.addEventListener('click', (e) => {
   if (e.target.classList.contains('bi-heart')) {
     const itemID = e.target.getAttribute('item-id');
     sendLikes(itemID);
+    const card = e.target.closest('div');
+    const countItem = card.querySelector('.likes-count');
+    countItem.textContent = Number(countItem.textContent) + 1;
     e.target.classList.remove('bi-heart');
     e.target.classList.add('bi-heart-fill');
-    makeProductList('smartphones');
-    makeProductList('laptops');
-    makeProductList('lighting');
   }
+});
+
+document.addEventListener('load', () => {
+  makeProductList('smartphones');
+  makeProductList('laptops');
+  makeProductList('lighting');
 });
