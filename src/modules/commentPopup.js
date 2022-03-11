@@ -39,16 +39,6 @@ document.addEventListener('click', (e) => {
   if (e.target.classList.contains('slide-img')) {
     changeThumbnails(e.target.src);
   }
-  if (e.target.id === 'submit') {
-    const id = e.target.getAttribute('item_id');
-    const popup = document.querySelector('.comments-popup');
-    const message = document.querySelector('.submit-status');
-    message.textContent = '';
-    e.preventDefault();
-    if (submitComment(id)) {
-      popup.style.display = 'none';
-    }
-  }
 });
 
 document.addEventListener('mouseover', (e) => {
@@ -62,8 +52,8 @@ document.addEventListener('click', (e) => {
   const menu = document.querySelector('.categories');
   const menuClose = document.querySelector('.bi-x');
   if (
-    e.target.classList.contains('link')
-    && window.screen.width < 768
+    e.target.classList.contains('link') &&
+    window.screen.width < 768
   ) {
     menu.style.display = 'none';
     menuClose.style.display = 'none';
@@ -72,11 +62,22 @@ document.addEventListener('click', (e) => {
 });
 
 document.addEventListener('click', (e) => {
-  if (e.target.classList.contains('popup-close')) {
-    const overlay = document.querySelector('.overlay');
-    const popup = document.querySelector('.comments-popup ');
+  const id = e.target.getAttribute('item_id');
+  const popup = document.querySelector('.comments-popup');
+  const message = document.querySelector('.submit-status');
+  const overlay = document.querySelector('.overlay');
 
+  if (e.target.classList.contains('popup-close')) {
     popup.style.display = 'none';
     overlay.classList.toggle('overlay-style');
+  }
+
+  if (e.target.id === 'submit') {
+    message.textContent = '';
+    e.preventDefault();
+    if (submitComment(id)) {
+      popup.style.display = 'none';
+      overlay.classList.toggle('overlay-style');
+    }
   }
 });
