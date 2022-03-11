@@ -100,13 +100,14 @@ body {
 .laptops-container,
 .lighting-container {
   margin-top: 7%;
-  text-align: center;
   flex-direction: column;
   justify-content: flex-start;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  padding-left: 7%;
+  padding-top: 1.5rem;
 }
 
 .product-count {
@@ -119,6 +120,22 @@ h2 {
   padding: 0 10%;
   display: grid;
   justify-items: center;
+}
+
+@media (max-width: 540px) {
+
+  .product-count {
+    font-size: inherit;
+  }
+  .products {
+    padding: 0 1%;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    padding-left: 0;
+    text-align: center;
+  }
 }
 
 @media (min-width: 768px) {
