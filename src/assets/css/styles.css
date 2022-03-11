@@ -102,6 +102,7 @@ body {
   margin-top: 7%;
   text-align: center;
   flex-direction: column;
+  justify-content: flex-start;
 }
 
 h2 {
@@ -109,10 +110,8 @@ h2 {
 }
 
 .product-count {
-  color: #ed7966;
-  font-size: 1.4rem;
-  position: absolute;
-  top: 65px;
+  font-weight: bold;
+  color: var(--dark-pink);
 }
 
 .products {

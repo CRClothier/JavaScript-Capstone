@@ -13,7 +13,7 @@ const updateProductsArray = () => {
         const laptopsArray = laptops.products;
         allProductsArray = lightingArray.concat(smartphonesArray, laptopsArray);
         const numberOfProducts = productCounter(allProductsArray);
-        document.querySelector('.product-count').innerHTML = `${numberOfProducts} products`;
+        document.querySelector('.product-count').innerHTML = `${numberOfProducts}`;
       });
     });
   });
