@@ -14,9 +14,12 @@ document.addEventListener('click', (e) => {
   if (e.target.classList.contains('comments')) {
     const buttonComment = document.getElementById('submit');
     const { id } = e.target;
+
     buttonComment.setAttribute('item_id', id);
     const popup = document.querySelector('.comments-popup ');
+    const overlay = document.querySelector('.overlay');
     popup.style.display = 'block';
+    overlay.classList.toggle('overlay-style');
 
     fetchSingleProduct(id).then((product) => {
       displayContent(product);
@@ -59,11 +62,21 @@ document.addEventListener('click', (e) => {
   const menu = document.querySelector('.categories');
   const menuClose = document.querySelector('.bi-x');
   if (
-    e.target.classList.contains('link')
-    && window.screen.width < 768
+    e.target.classList.contains('link') &&
+    window.screen.width < 768
   ) {
     menu.style.display = 'none';
     menuClose.style.display = 'none';
     menuOpen.style.display = 'block';
+  }
+});
+
+document.addEventListener('click', (e) => {
+  if (e.target.classList.contains('popup-close')) {
+    const overlay = document.querySelector('.overlay');
+    const popup = document.querySelector('.comments-popup ');
+
+    popup.style.display = 'none';
+    overlay.classList.toggle('overlay-style');
   }
 });

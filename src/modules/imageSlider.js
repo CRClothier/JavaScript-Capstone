@@ -17,6 +17,7 @@ const addSlide = (image, index) => {
 };
 
 const constructImageSlide = (container, id) => {
+  imageSlide.textContent = '';
   getImage(id).then((result) => {
     result.images.forEach((image, index) => {
       addSlide(image, index);

@@ -1,13 +1,28 @@
 .comments-popup {
+  max-height: 100vh;
   display: none;
   background-color: #ffe;
-  width: 90%;
+  width: 80vw;
   position: absolute;
-  top: 5%;
-  margin-left: 5rem;
-  padding: 3rem 2rem 5% 2rem;
-  z-index: 99;
-  box-shadow: 0 17px 47px 16px var(--light-pink);
+  top: 0;
+  left: 10vw;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 2rem;
+  z-index: 11;
+  box-shadow: 0 10px 10px 10px var(--dark);
+  overflow-y: scroll;
+}
+
+.overlay-style {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--dark-blue);
+  opacity: 0.2;
 }
 
 .item-detail-box {
@@ -23,13 +38,13 @@
   justify-content: center;
   width: 100%;
   border-radius: 0.5rem;
-  margin-right: 4rem;
+  margin-right: 3rem;
   border: 3px solid var(--white);
   overflow: hidden;
 }
 
 .popup-image {
-  min-width: 40rem;
+  width: 100%;
   height: 25rem;
 }
 
@@ -67,7 +82,14 @@
 
 @media screen and (max-width: 992px) {
   .comments-popup {
-    margin-left: 2.5rem;
+    width: 96vw;
+    left: 2vw;
+    margin: 0 2vw;
+    padding: 2rem;
+  }
+
+  .popup-close {
+    right: 2rem;
   }
 
   .popup-image {
@@ -215,15 +237,19 @@
 
 @media screen and (max-width: 768px) {
   .comments-popup {
-    margin: 0;
-    width: 100%;
-    top: 0;
-    padding: 1rem 2rem 5% 1rem;
+    width: 98vw;
+    left: 1vw;
+    margin: 0 1vw;
+    padding: 2rem;
+  }
+
+  .popup-close {
+    right: 1rem;
   }
 
   .popup-image {
     width: auto;
-    height: 10rem;
+    height: 15rem;
   }
 
   .item-comments {
